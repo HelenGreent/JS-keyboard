@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    transition: 0.2s;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 10px;
+}
+.keyboard_wrapp {
+    max-width: 980px;
+    width: 100%;
+    background-color: #e7e7e7;
+    overflow: hidden;
+    position: relative;
+    order: 2;
+}
+.row {
+    display: flex;
+}
+
+.keys {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    transition: 0.2s;
+    z-index: 5;
+}
+
+.backspace_key {
+    width: 120px;
+}
+.tab_key {
+    width: 90px;
+}
+.slash_key {
+    width: 90px;
+}
+.caps_lock_key {
+    width: 120px;
+}
+.enter_key {
+    width: 120px;
+}
+.space_key {
+    width: 780px;
+}
+.shift_key {
+    width: 124px;
+}
+.text {
+    max-width: 980px;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    background-color: #f7f7f7;
+    padding-left: 10px;
+    transition: 0.2s;
+}
+.keys.active{
+    background-color: #242539;
+    color: #fff;
+}
+
+
+@keyframes keys_animation {
+  0% {
+    background-color: #242539;
+    color: #fff;
+  }
+  100% {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+body.active {
+    background-color: #121221;
+}
+.night_mode {
+    width: 90px;
+    height: 30px;
+    background-color: #e6e6e6;
+    border-radius: 60px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.night_mode.active {
+    background-color: #222222;
+}
+.toggle_circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    margin:  0 5px;
+    background-color: #121221;
+    position: absolute;
+    left: 0;
+    transition: 0.2s;
+}
+
+
+.toggle_circle.active {
+    left: 60%;
+    background-color: #fff;
+}
+.keyboard_wrapp.active {
+    background-color: #2C2D47;
+}
+.keys.keys_night {
+    background-color: #3c3c3c;
+    color: #fff;
+}
+.text.active {
+    background-color: #2C2D47;
+}
+
+.keys.keys_night.active {
+    background-color: #fff;
+    color: #333;
+}
+.keys.keys_night.remove {
+    animation: keys_night_animation 0.5s forwards;
+}
+
+
+@keyframes keys_night_animation {
+    0% {
+      background-color: #fff;
+      color: #000;
+    }
+    100% {
+      background-color: #333;
+      color: #fff;
+    }
+  }
+
+.change_light_color{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 150px;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colors_input {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-color: transparent;
+}
+.change_light_color.night {
+    background-color: #222222;
+}
+
+.keyboard_lights {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
